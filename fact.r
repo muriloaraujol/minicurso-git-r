@@ -1,14 +1,12 @@
-Fibonacci <- function(n)
-{
-  if(n == 1|n == 2)
-  {
+Fact <- function(n){
+  if(n < 0){
+    stop("Error: your input is wrong!")
+  } else if(n == 0){
     return(1)
-  }
-  else
-  {
-    return(Fibonacci(n-1) + Fibonacci(n - 2))
+  } else {
+    return(prod(1:n))
   }
 }
 
-Fibonacci(1)
-Fibonacci(11)
+Fact(5)
+Fact(6)
